@@ -1,27 +1,87 @@
-# Ibook
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
+# iBook
 
-## Development server
+iBook is an Angular application that allows users to write documents and access information about specific words within the document. It also allows users to send the document to a friend by filling out a form.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Demo
 
-## Build
+![](demo.gif)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
 
-## Running unit tests
+- Double-clicking on a word in the document editor shows information about that word on the right side of the screen.
+- Uses the ngx-quill rich text editor for document creation.
+- Uses NgRx for maintaining local states of information.
+- Uses the Word LookUp REST API to retrieve information about specific words.
+- Allows users to view the document by filling out a form that collects the phone, name, city, and email address etc.
+- Uses Reactive Forms and Directives.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## File Structure
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+ibook/
+├── src/
+│   ├── app/
+│   │   ├── _shared/
+│   │   │   ├── directive/
+│   │   │   │   ├── hover-cursor.directive.ts
+│   │   │   │   └── textstyle.directive.ts
+│   │   │   ├── model/
+│   │   │   │   └── model.ts
+│   │   │   ├── pipe/
+│   │   │   │   └── safehtml.pipe.ts
+│   │   │   ├── services/
+│   │   │   │    └── api.service.ts
+│   │   ├── component/
+│   │   │   ├── edit/
+│   │   │   │   ├── edit.component.html
+│   │   │   │   ├── edit.component.scss
+│   │   │   │   └── edit.component.ts
+│   │   │   ├── home/
+│   │   │   │   ├── home.component.html
+│   │   │   │   ├── home.component.scss
+│   │   │   │   └── home.component.ts
+│   │   │   ├── view/
+│   │   │   │   ├── view.component.html
+│   │   │   │   ├── view.component.scss
+│   │   │   │   └── view.component.ts
+│   │   ├── store/
+│   │   │   │   ├── user.actions.ts
+│   │   │   │   └── user.reducer.ts
+│   │   ├── app-routing.module.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   └── app.module.ts
+│   ├── assets/
+│   ├── environments/
+│   │   ├── environment.prod.ts
+│   │   └── environment.ts
+│   ├── index.html
+│   ├── main.ts
+│   ├── polyfills.ts
+│   ├── styles.scss
+│   ├── test.ts
+│   └── tsconfig.json
+├── angular.json
+├── package-lock.json
+├── package.json
+└── README.md
+```
+## Installation & Requirements
 
-## Further help
+To run the iBook application, you'll need to have the following installed on your computer:
+- Node.js
+- Angular CLI
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To install iBook, follow these steps:
+
+- Clone the repository.
+- Navigate to the project directory in the terminal.
+- Run the command `npm install` to install the project dependencies.
+- Run the command `ng serve` to start the development server.
+- Open your web browser and navigate to `http://localhost:4200/`
