@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiKey: '14b6712795mshf98364ba9592ef0p160b3djsn0d2410cd7a3a',
+  baseUrl: 'wordsapiv1.p.rapidapi.com',
 };
 
 /*

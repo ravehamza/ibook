@@ -1,0 +1,37 @@
+<div class="article">
+  <div *ngIf="user$ | async as items" style="padding: 20px">
+    <div *ngFor="let item of items">
+      <div [innerHTML]="item.textEditor | safeHtml"></div>
+      <div class="card-info mb-1">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="profile picture"
+          class="profile-img"
+        />
+        <div class="d-flex flex-column justify-content-between w-100">
+          <div>
+            <h2 style="margin: 0 0 0.5rem 0" class="fw-bold fs-5">
+              {{ item.firstName | titlecase }} {{ item.lastName | titlecase }}
+            </h2>
+            <p class="text-style">
+              {{ item.email }}
+            </p>
+            <p class="text-style">
+              {{ item.phoneNumber }}
+            </p>
+          </div>
+          <div style="display: flex; font-size: 0.875rem; margin-top: 0.5rem">
+            <p class="label-text">City:</p>
+            <p class="me-4">{{ item.city | titlecase }}</p>
+            <p class="label-text">State:</p>
+            <p class="me-4">{{ item.state | titlecase }}</p>
+            <p class="label-text">Country:</p>
+            <p class="me-4">{{ item.country | titlecase }}</p>
+            <p class="label-text">Zip:</p>
+            <p>{{ item.zipCode }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
