@@ -1,0 +1,35 @@
+.article {
+  width: 80%;
+  margin: auto;
+  margin-top: 4.5rem;
+  background-color: whitesmoke;
+}
+
+.card-info {
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.profile-img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  margin-right: 1rem;
+}
+
+.text-style {
+  margin: 0;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.label-text {
+  margin-right: 0.5rem;
+  font-weight: 700;
+}
